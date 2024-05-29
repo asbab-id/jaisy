@@ -21,6 +21,8 @@ if (isset($input['jaisy'])) {
             'listPrint' => $GLOBALS['listPrint'],
             'input' => $jaisy,
             'totalBaris' => $GLOBALS['totalBaris'],
+            'jikaMaka' => $GLOBALS['tmpJikaMaka'],
+            'listBaris' => $GLOBALS['listBaris'],
         ]
     ]);
 } else {

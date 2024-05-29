@@ -199,6 +199,7 @@ print $makan[result][1][arab] // أكَلَ ـُـ أكْلاً الطعامَ :
                 console.log(data['debug']);
             })
             .catch(error => {
+                alert('Error Interpreter System');
                 console.error('Error:', error);
             });
         }

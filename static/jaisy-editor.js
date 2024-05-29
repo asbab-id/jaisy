@@ -12,6 +12,11 @@ updateLineNumbers();
 syntaxHighlight();
 saveState();
 
+// Menambahkan event listener untuk beforeunload
+window.addEventListener('beforeunload', function (e) {
+    e.preventDefault();
+});
+
 // Menambahkan event listener untuk keydown
 codeEditor.addEventListener('keydown', function(event) {
     specialKeydown = event.ctrlKey && ['z', 'y', 'a', 'c', 'v'].includes(event.key.toLowerCase());
