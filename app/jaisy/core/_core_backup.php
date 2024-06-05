@@ -16,6 +16,8 @@ $GLOBALS['listVar'] = [];
 $GLOBALS['listPrint'] = [];
 $GLOBALS['tmpJikaMaka'] = [];
 $GLOBALS['listenJika'] = [];
+$GLOBALS['tmpBuatFungsi'] = [];
+$GLOBALS['listenBuatFungsi'] = [];
 
 
 function jaisyInterpreter($jaisy){
@@ -27,8 +29,8 @@ function jaisyInterpreter($jaisy){
     $GLOBALS['listBaris'] = $pecah_baris;
     
     
-    for($i=1;$i<count($pecah_baris);$i++){
-        render($i, $pecah_baris[$i]);
+    for($i=1;$i<count($GLOBALS['listBaris']);$i++){
+        render($i, $GLOBALS['listBaris'][$i]);
         if(isset($GLOBALS['error'])){break;} // stop jika ada error
     }
 
@@ -44,6 +46,9 @@ function render($barisKe, $code){
     cekSyntax($barisKe, $code);
     varJaisy($barisKe, $code);
     jikaMakaJaisy($barisKe, $code);
+    buatFungsiJaisy($barisKe, $code);
+
+
     printJaisy($barisKe, $code);
 }
 
@@ -77,6 +82,9 @@ function varJaisy($barisKe, $code, $note=''){
                 $arg4 = $cariFungsi[4] ?? null;
                 if(in_array($fungsi, $GLOBALS['fungsiJaisy'])){
                     $GLOBALS['listVar'][$namaVar] = $fungsi(parseX($barisKe, $arg1), parseX($barisKe, $arg2), parseX($barisKe, $arg3), parseX($barisKe, $arg4));
+                }elseif(isset($GLOBALS['tmpBuatFungsi'][substr($fungsi, 1)])){
+                    $fungsi = substr($fungsi, 1);
+                    $GLOBALS['listVar'][$namaVar] = callFungsiBuat($barisKe, $fungsi, [parseX($barisKe, $arg1, 'isolasiSpasi'), parseX($barisKe, $arg2, 'isolasiSpasi'), parseX($barisKe, $arg3, 'isolasiSpasi'), parseX($barisKe, $arg4, 'isolasiSpasi')]);
                 }
             }
         }else{
@@ -153,7 +161,12 @@ function parseX($barisKe, $data, $note=''){
         }
     }
 
-    $output = implode('', $pecahSpasi);
+    if($note == 'isolasiSpasi'){
+        $output = implode('', $pecahSpasi);
+        $output = isolasiSpasi($barisKe, $output);
+    }else{
+        $output = implode('', $pecahSpasi);
+    }
     return parseIsolasiPetik($barisKe, $output);
 }
 
@@ -333,6 +346,90 @@ function jikaMakaJaisy($barisKe, $code){
 
 } // end jikaMakaJaisy
 
+function buatFungsiJaisy($barisKe, $code){
+    $pecahSpasi = explode(' ', $code);
+    $firstWord = $pecahSpasi[0];
+    if($firstWord == 'buat_fungsi'){
+        unset($pecahSpasi[0]);
+        $isiBuatFungsi = implode(' ', $pecahSpasi);
+        $namaFungsi = $pecahSpasi[1];
+        $GLOBALS['tmpBuatFungsi'][$namaFungsi]['isi'] = $isiBuatFungsi;
+        $listArg = explode(' : ', $isiBuatFungsi); array_shift($listArg);
+        $GLOBALS['tmpBuatFungsi'][$namaFungsi]['arg'] = $listArg;
+        $GLOBALS['listenBuatFungsi']['idBuatFungsi'] = count($GLOBALS['tmpBuatFungsi']) - 1;
+
+        // menangkap list baris antara tutup_fungsi
+        $o = 0;
+        for($i=$barisKe; $i<$GLOBALS['totalBaris']; $i++){
+            $o = $i+1;
+            // $GLOBALS['listBaris'][$i] = trim($GLOBALS['listBaris'][$i]);
+            $firstWordScan = explode(' ', trim($GLOBALS['listBaris'][$i]))[0];
+            if($i !== $barisKe){
+                $GLOBALS['tmpBuatFungsi'][$namaFungsi]['aksi'][] = [$i, $GLOBALS['listBaris'][$i]];
+            }
+
+            // echo $firstWordScan . PHP_EOL;
+            if($firstWordScan !== 'buat_fungsi' && $firstWordScan !== 'tutup_fungsi'){
+                // echo $firstWordScan;
+                if(substr(trim($firstWordScan), 0, 1) !== '$' && substr(trim($firstWordScan), 0, 2) !== '//'){ // jika di dalam buat_fungsi bukan variabel
+                    // echo substr(trim($GLOBALS['listBaris'][$o]), 0, 2);
+                    error($o, 'tidak Sesuai Aturan');
+                    break;
+                }
+            }
+
+            $GLOBALS['listBaris'][$i] = '//isolasi_Fungsi__Jaisy___System'.$GLOBALS['listBaris'][$i];
+
+            if($firstWordScan == 'tutup_fungsi'){ // baris tutup fungsi
+                // echo $i . 'ketemu';
+                $GLOBALS['tmpBuatFungsi'][$namaFungsi]['barisTutupFungsi'] = $i;
+                array_pop($GLOBALS['tmpBuatFungsi'][$namaFungsi]['aksi']);
+                // echo $GLOBALS['tmpBuatFungsi'][$namaFungsi]['barisTutupFungsi'];
+                // print_r($GLOBALS['tmpBuatFungsi']);
+                // echo $firstWordScan;
+                break;
+            }
+            // echo $i;
+        }
+        // $GLOBALS['tmpBuatFungsi'][$namaFungsi]['barisTutupFungsi'] = 'cok';
+        // echo $GLOBALS['tmpBuatFungsi'][$namaFungsi]['barisTutupFungsi'];
+        // var_dump($GLOBALS['tmpBuatFungsi'][$namaFungsi]);
+    }
+}
+
+function callFungsiBuat($barisKe, $fungsi, $arg){
+    // print_r($GLOBALS['tmpBuatFungsi'][$fungsi]);
+    // print_r($arg);
+    // $GLOBALS['listPrint'][] = $fungsi;
+    $tmpFungsi = [];
+    $bluePrint = $GLOBALS['tmpBuatFungsi'][$fungsi];
+    for($i=0; $i<count($bluePrint['aksi']); $i++){
+        $pecahSpasi = explode(' ', $bluePrint['aksi'][$i][1]);
+        $var = substr(trim($pecahSpasi[0]), 1);
+
+        $a = $bluePrint['arg'];
+        $b = array_values(array_filter($arg));
+        $replacement_map = array_combine(array_slice($a, 0, count($b)), $b);
+        $parsed = str_replace(array_keys($replacement_map), array_values($replacement_map), $bluePrint['aksi'][$i][1]);
+
+        $parsed2 = str_replace(' $', ' -$`_!', $parsed); // isolasi dolar
+        preg_match('/\$(.*?)\s*=\s*(.*)/', $parsed2, $matches);
+        if ($matches) {
+            // echo $code;
+            $namaVar = $matches[1];
+            $isiVar = $matches[2];
+            $tmpFungsi[$var] = $isiVar;
+        }
+    }
+    // print_r($tmpFungsi);
+    $output = parseX($barisKe,  $tmpFungsi['hasil']);
+    $output = str_replace(' -$`_!', ' $',  $output); // kembalikan isolasi dolar
+    $output = parseIsolasiSpasi($barisKe, $output);
+    // $output = 
+    return $output;
+}
+
+
 
 function isolasiPetik($barisKe, $data){
     return preg_replace_callback(
@@ -350,6 +447,14 @@ function isolasiPetik($barisKe, $data){
 
 function parseIsolasiPetik($barisKe, $data){
     return str_replace('!^`_^!`', ' ', $data);
+}
+
+function isolasiSpasi($barisKe, $data){
+    return str_replace(' ', '!^`_^!!!`', $data);
+}
+
+function parseIsolasiSpasi($barisKe, $data){
+    return str_replace('!^`_^!!!`', ' ', $data);
 }
 
 function cekSyntax($barisKe, $data){

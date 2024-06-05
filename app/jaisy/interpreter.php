@@ -1,5 +1,5 @@
 <?php
-require_once '_core.php';
+require_once 'core/_core.php';
 
 header("Content-Type: application/json");
 
@@ -23,6 +23,7 @@ if (isset($input['jaisy'])) {
             'totalBaris' => $GLOBALS['totalBaris'],
             'jikaMaka' => $GLOBALS['tmpJikaMaka'],
             'listBaris' => $GLOBALS['listBaris'],
+            'listFungsi' => $GLOBALS['tmpBuatFungsi']
         ]
     ]);
 } else {
