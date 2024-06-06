@@ -143,7 +143,7 @@ function jikaMakaJaisy($barisKe, $code){
         }else{
             $firstWordBarisSebelum = explode(' ', trim($GLOBALS['listBaris'][$barisKe-1]))[0];
             if($firstWordBarisSebelum !== 'maka'){
-                error($barisKe, 'Tidak Sesuai Aturan');
+                error($barisKe, 'instruksi maka belum ada.');
             }
         }
     }

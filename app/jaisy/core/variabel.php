@@ -36,7 +36,7 @@ function varJaisy($barisKe, $code, $note=''){
                 }
             }
         }else{
-            error($barisKe, 'Tidak Sesuai Aturan');
+            error($barisKe, 'Tidak Sesuai Aturan Penulisan Variabel.');
         }
     }elseif($firstWord == 'update'){
         unset($pecahSpasi[0]);
@@ -45,12 +45,12 @@ function varJaisy($barisKe, $code, $note=''){
         if(substr($pecahSpasi[1], 0, 1) == '$'){
             varJaisy($barisKe,$isiUpdate, 'updateVar');
         }else{
-            error($barisKe, 'Tidak Sesuai Aturan');
+            error($barisKe, 'Tidak Sesuai Aturan Udate Variabel.');
         }
     }else{
         if($note == 'varOnly'){
             if($firstChar !== '$'){
-                error($barisKe, 'Tidak Sesuai Aturan');
+                error($barisKe, 'Tidak Sesuai Aturan. (varOnly)');
             }
         }
     }

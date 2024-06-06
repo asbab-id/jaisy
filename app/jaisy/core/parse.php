@@ -33,7 +33,7 @@ function parseX($barisKe, $data, $note=''){
     return parseIsolasiPetik($barisKe, $output);
 }
 
-function parseVar($barisKe, $data, $note='ifFalseReturnRaw'){
+function parseVar($barisKe, $data, $note=''){
     // debug('parseVar', $data);
     if(isset($GLOBALS['listVar'][$data])){
         return $GLOBALS['listVar'][$data];
