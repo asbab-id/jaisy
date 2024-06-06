@@ -18,9 +18,7 @@ function buatFungsiJaisy($barisKe, $code){
         $GLOBALS['listenBuatFungsi']['idBuatFungsi'] = count($GLOBALS['tmpBuatFungsi']) - 1;
 
         // menangkap list baris antara tutup_fungsi
-        $o = 0;
         for($i=$barisKe; $i<$GLOBALS['totalBaris']; $i++){
-            $o = $i+1;
             // $GLOBALS['listBaris'][$i] = trim($GLOBALS['listBaris'][$i]);
             $firstWordScan = explode(' ', trim($GLOBALS['listBaris'][$i]))[0];
             if($i !== $barisKe){
@@ -31,7 +29,7 @@ function buatFungsiJaisy($barisKe, $code){
             if($firstWordScan !== 'buat_fungsi' && $firstWordScan !== 'tutup_fungsi'){
                 // echo $firstWordScan;
                 if(substr(trim($firstWordScan), 0, 1) !== '$' && substr(trim($firstWordScan), 0, 2) !== '//'){ // jika di dalam buat_fungsi bukan variabel
-                    error($o, 'tidak Sesuai Aturan. (buat_fungsi)');
+                    error($i, 'tidak Sesuai Aturan. (buat_fungsi)');
                     break;
                 }
             }
