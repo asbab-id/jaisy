@@ -1,5 +1,5 @@
 <?php
-require_once '_charPegonList.php';
+require_once 'core/listChar.php';
 
 
 // ga jadi deh wkwkwk

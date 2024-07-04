@@ -1,0 +1,1237 @@
+<!-- <section class="chapter">
+    <h2 class="judul-chapter">Chapter 1</h2>
+    <section class="section">
+        <h3 class="judul-section">1.a</h3>
+        <p class="content-section">gatau males</p>
+        <pre class="code-section"><code>// Code example</code></pre>
+        <p class="penjelasan-section">begitulah</p>
+    </section>
+    
+    <section class="section">
+        <h3 class="judul-section">1.b</h3>
+        <p class="content-section">gatau males</p>
+        <pre class="code-section"><code>// Code example</code></pre>
+        <p class="penjelasan-section">begitulah</p>
+    </section>
+</section> -->
+
+<section class="chapter">
+    <h2 class="judul-chapter">Intro</h2>
+    <p class="keterangan-chapter">
+        Kita tidak akan bisa bertanggung jawab tanpa mengenali.
+    </p>
+
+    <section class="section">
+        <h3 class="judul-section">Perkenalan</h3>
+        <p class="content-section">
+            Jaisy merupakan Bahasa Scripting yang dikembangkan oleh Asbab Project untuk menjadi bahasa komunikasi peneliti dalam mengerjakan NLP Rule Based Asbab Project.
+        </p>
+    </section>
+
+    <section class="section">
+        <h3 class="judul-section">Filosofi</h3>
+        <p class="content-section">
+            Jaisy dibuat untuk mudah dimengerti oleh Pihak yang tidak terbiasa dengan Bahasa Pemprograman.
+            Jaisy menekankan kejelasan algoritma dalam tahapan mengerjakan NLP Rule Based Asbab Project.
+            Oleh karena itu, Jaisy mengorbankan efisiensi penulisan Syntax atau Instruksi.
+            Hal itu membuat Jaisy tampak berbeda dengan Bahasa Pemprograman lainnya.
+            dalam menentukan Aturan Penulisan, Jaisy tidak mempunyai aturan ketat dalam penggunaan bahasa.
+            Jaisy menggunakan bahasa campuran yang dirasa akan mudah dimengerti oleh peneliti.
+        </p>
+    </section>
+
+    <section class="section">
+        <h3 class="judul-section">Syntax Penulisan</h3>
+        <p class="content-section">
+            Jaisy sangat ketat dalam penulisan syntax. Banyak aturan yang bersifat memaksakan karena menyesuaikan filosofi.
+            Kami menganjurkan pengguna untuk mempelajari dokumentasi dengan seksama.
+        </p>
+    </section>
+
+    <section class="section">
+        <h3 class="judul-section">Editor</h3>
+        <p class="content-section">
+            Jaisy Editor berbasis Web Based dengan fitur Line Numbering, Syntax Highlight, dan Suggestion.
+            Namun saat ini fitur Syntax Highlight masih menggunakan aturan regex sederhana dan belum dapat mengindikasikan error atau kesalahan syntax.
+            Saat ini masih ada beberapa kekurangan dalam User Experience pada Editor yang membuat kurang nyaman.
+            Harap pemakluman dan dukungannya.
+        </p>
+    </section>
+
+    <section class="section">
+        <h3 class="judul-section">Interpreter</h3>
+        <p class="content-section">
+            Jaisy merupakan Bahasa Scripting yang membutuhkan interpreter.
+            dalam hal ini, sistem Jaisy Interpreter berjalan di atas bahasa PHP.
+        </p>
+    </section>
+
+    <section class="section">
+        <h3 class="judul-section">Rilis</h3>
+        <p class="content-section">
+            Kami memutuskan untuk merilis ke Publik untuk membantu mengembangkan NLP Rule Based Asbab Project.
+            Kami belum bisa merilis Jaisy Interpreter ke Publik selama masih tahap pengembangan.
+        </p>
+    </section>
+    
+    <!-- <section class="section">
+        <h3 class="judul-section">Print Data</h3>
+        <p class="content-section">gatau males</p>
+        <pre class="code-section"><code>print Hallo @FAK</code></pre>
+        <p class="code-output">cok</p>
+        <p class="penjelasan-section">begitulah</p>
+    </section> -->
+
+</section>
+<!-- end chapter -->
+
+
+<section class="chapter">
+    <h2 class="judul-chapter">Basic</h2>
+    <p class="keterangan-chapter">
+        Syntax dasar dari Jaisy yang harus dimengerti.
+    </p>
+    
+    <section class="section">
+        <h3 class="judul-section">Print</h3>
+        <p class="content-section">
+            Instruksi untuk menampilkan data.
+            <br>
+            Instruksi Print hanya dapat menampilkan data. Oleh karena itu, Instruksi Print tidak dapat melakukan pemanggilan fungsi dan manipulasi data.
+        </p>
+        <pre class="code-section"><code>
+print Assalamualaina
+print جيش 
+print
+print  Halloo
+            </code></pre>
+        <p class="code-output">
+Assalamualaina
+جيش
+
+Halloo 
+        </p>
+        <p class="penjelasan-section">
+            Data akan ditampilkan secara berurutan dari atas ke bawah.
+            Baris ketiga akan menampilkan baris baru dengan text kosong.
+        </p>
+    </section>
+
+
+
+    <section class="section">
+        <h3 class="judul-section">Komentar</h3>
+        <p class="content-section">
+            Instruksi untuk catatan di dalam kode.
+Komentar tidak akan dieksekusi sebagai instruksi.
+Namun hanya digunakan untuk catatan saja.
+Sehingga instruksi yang diberi komentar tidak akan dieksekusi.
+Cara menulis komentar adalah dengan menambahkan garis miring kanan //  2 kali.
+Dapat ditulis di awal baris atau  di akhir.
+        </p>
+        <pre class="code-section"><code>
+print Assalamualaina
+// kode ini tidak akan dieksekusi
+print جيش // jaisy             
+            </code></pre>
+        <p class="code-output">
+Assalamualaina
+جيش  
+        </p>
+        <p class="penjelasan-section">
+            Karena Komentar ada pada awal baris, Instruksi pada baris kedua akan diabaikan secara keseluruhan.
+            Pada baris ketiga, instruksi sebelum komentar akan tetap dijalankan.
+           
+           *Jika kode sudah sangat panjang, komentar sangat berguna untuk menjadi catatan atau menonaktifkan sebagian instruksi.           
+        </p>
+    </section>
+
+
+
+    <section class="section">
+        <h3 class="judul-section">Transliterasi</h3>
+        <p class="content-section">
+            Instruksi untuk memanggil karakter Asb Char. Baca List.
+
+            Cara menulis Indo Char adalah dengan menggunakan @ dengan diikuti kode.
+            Setiap Indo Char hanya dapat memanggil 1 karakter saja.            
+        </p>
+        <pre class="code-section"><code>
+print @JIM @YAK @SYIN
+print @ALIF @LAM @JIM @YAK @SYIN         
+            </code></pre>
+        <p class="code-output">
+جيش
+الجيش             
+        </p>
+        <p class="penjelasan-section">
+            Data yang ditampilkan akan digabung tanpa spasi, menjadikan data hanya 1 kata.          
+        </p>
+    </section>
+
+
+    <section class="section">
+        <h3 class="judul-section">Pegon</h3>
+        <p class="content-section">
+            Instruksi untuk merubah text abc menjadi pegon.
+
+            Cara menggunakan : gunakan karakter pagar.            
+        </p>
+        <pre class="code-section"><code>
+print #aku @ #lagi @ #koding
+print #Alklam_hw_ALlfZH_Almrkb_bALwDHE                
+            </code></pre>
+        <p class="code-output">
+أكو لاڮي كوديڠ
+الكلام هو اللفظ المركب بالوضع                
+        </p>
+        <p class="penjelasan-section">
+            Gaya penulisan dapat digunakan perkata dengan menggunakan operator penggabungan untuk membuat spasi.
+            Bisa juga dengan menggunakan garis bawah. 
+        </p>
+    </section>
+
+
+
+    <section class="section">
+        <h3 class="judul-section">Penggabungan Text</h3>
+        <p class="content-section">
+            Jaisy secara bawaan akan menggabungkan setiap text, dalam artian tidak ada spasi.
+            Jika ingin menambahkan spasi, dapat menggunakan operator penggabungan yaitu, karakter tunggal @/#/$.
+        </p>
+        <pre class="code-section"><code>
+print Assalamualaina
+print Hallo Kehidupan
+print Hallo @ Kehidupan. # Aku $ Hidup.             
+            </code></pre>
+        <p class="code-output">
+Assalamualaina
+HalloKehidupan
+Hallo Kehidupan. Aku Hidup.                            
+        </p>
+        <p class="penjelasan-section">
+            Pada Baris Ke-3. Data akan ditampilkan tanpa spasi.
+            Pada Baris Ke-4 Data akan ditampilkan dengan spasi. Karena diberi Instruksi Penggabungan.
+        </p>
+    </section>
+
+
+
+    <section class="section">
+        <h3 class="judul-section">Text Panjang</h3>
+        <p class="content-section">
+            Text Panjang adalah data text yang diapit oleh petik tunggal atau petik ganda.
+            Text Panjang akan ditampilkan dengan apa adanya. dalam artian dengan spasi dan segala karakter yang ada di dalamnya.
+        </p>
+        <pre class="code-section"><code>
+print 'ini adalah Jaisy Query Interpreter' @ "Ayo Kapan Ono!!!"
+print 'Penulisan Arab : ' @JIM @YAK @SYIN @ JAISYUN
+
+print 'Saya menulis : @ALIF @LAM'         
+            </code></pre>
+        <p class="code-output">
+ini adalah Jaisy Query Interpreter Ayo Kapan Ono!!!
+Penulisan Arab : جيش JAISYUN
+Saya menulis : @ALIF @LAM                                     
+        </p>
+        <p class="penjelasan-section">
+            Pada Baris Ke-1 terdapat 2 Text Panjang yang digabungkan.
+            Pada Baris Ke-2 terdapat Text Panjang yang disambungkan dengan Text Pendek yang terdapat Asb Char
+            Pada Baris Ke-4 terdapat Instruksi Asb Char di dalam Text Panjang yang tidak akan terbaca sebagai Asb Char.            
+        </p>
+    </section>
+
+
+
+
+    <section class="section">
+        <h3 class="judul-section">Variabel</h3>
+        <p class="content-section">
+            Variabel adalah instruksi untuk menyimpan data. 
+            Cara pendefinisian variabel adalah dengan aturan berikut :
+            ($)nama_variabel  (=) Isi_data
+            
+            Variabel tidak dapat didefinisikan 2 kali.
+            Gunakan keyword Update untuk memperbaharui data.            
+        </p>
+        <pre class="code-section"><code>
+$nama = faza
+$namaArab = @FAK @ALIF @ZAI
+print 'Nama saya adalah : ' $nama '. dengan text arab : ' $namaArab
+
+update $nama = ilmi
+update $namaArab = @AIN @LAM @MIM
+print 'Nama saya adalah : ' $nama '. dengan text arab : ' $namaArab      
+            </code></pre>
+        <p class="code-output">
+Nama saya adalah : faza. dengan text arab : فاز
+Nama saya adalah : ilmi. dengan text arab : علم                                              
+        </p>
+        <p class="penjelasan-section">
+            Kode tersebut adalah contoh penggunaan variabel dan update.
+            Jika memperbaharui variabel tanpa instruksi update maka akan muncul error. Interpreter akan menganggap adanya pendefinisian ulang variabel.          
+        </p>
+    </section>
+
+
+    <section class="section">
+        <h3 class="judul-section">Skill</h3>
+        <p class="content-section">
+            instruksi untuk memanipulasi data dan hanya bisa digunakan saat pendefinisian variabel.
+            Cara menggunakan skill : Definisikan Variabel, kemudian masukkan skillnya.
+            Contoh : gunduler : argument1
+
+            nama_skill (:) argumen1 (:) argumen2 (:) argumen3 (:) argumen4          
+        </p>
+        <pre class="code-section"><code>
+$jaisy       = 'جَيْشٌ'
+$jaisyGundul = gunduler : $jaisy
+print $jaisyGundul
+
+print 'Jaisy berharokat : ' $jaisy
+print 'Jaisy tidak berharokat : ' $jaisyGundul              
+            </code></pre>
+        <p class="code-output">
+جيش
+Jaisy berharokat : جَيْشٌ
+Jaisy tidak berharokat : جيش                                                       
+        </p>
+        <p class="penjelasan-section">
+            Pada baris ke-2 terdapat skill gunduler yang memiliki argumen yang berisi variabel.
+
+            *skill gunduler adalah skill untuk menghapus semua harokat. 
+        </p>
+    </section>
+
+
+
+
+    <section class="section">
+        <h3 class="judul-section">Logika</h3>
+        <p class="content-section">
+            Instruksi Logika adalah Instruksi untuk membuat percabangan logika.
+            Contoh simpel :
+            Jika ini benar
+            Maka lakukan ini
+            Jika_tidak lakukan ini                   
+        </p>
+        <pre class="code-section"><code>
+$cek = kata
+jika $cek merupakan kata
+maka $hasil = benar
+kemudian $hasil2 = betul
+atau_jika $cek merupakan entahlah
+maka $hasil = entah
+kemudian $hasil2 = tidak @ tahu
+jika_tidak $hasil = salah
+kemudian $hasil2 = ngawor
+
+print $hasil
+print $hasil2                        
+            </code></pre>
+        <p class="code-output">
+benar
+betul                                                                
+        </p>
+        <p class="penjelasan-section">
+            Alur :
+            Jika terpenuhi. Maka Lakukan ini.
+            Atau ini yang terpenuhi. Maka Lakukan ini
+            Jika tidak terpenuhi semuanya. Maka Lakukan ini.
+            
+            atau ???? wkwkwk            
+        </p>
+    </section>
+
+
+
+
+    <section class="section">
+        <h3 class="judul-section">Fungsi</h3>
+        <p class="content-section">
+            Fungsi adalah instruksi untuk membuat skill sendiri. Cara menggunakan fungsi yang sudah dibuat seperti menggunakan skill. Namun diberi *.
+            Cara Membuat Fungsi :
+            Buat_fungsi nama_fungsi : $argumen
+            ….
+            tutup_fungsi                 
+        </p>
+        <pre class="code-section"><code>
+buat_fungsi salam : $var1
+$hasil = 'اَلسَّلَامُ عَلَيْكُمْ وَرَحْمَةُ اللهِ وَبَرَكَا تُهُ' @ $var1
+tutup_fungsi
+
+
+$tesSalam1 = *salam : Faza
+print $tesSalam1
+
+$tesSalam2 = *salam : Asbab
+print $tesSalam2                              
+            </code></pre>
+        <p class="code-output">
+اَلسَّلَامُ عَلَيْكُمْ وَرَحْمَةُ اللهِ وَبَرَكَا تُهُ Faza
+اَلسَّلَامُ عَلَيْكُمْ وَرَحْمَةُ اللهِ وَبَرَكَا تُهُ Asbab
+        </p>
+        <p class="penjelasan-section">
+            Kode tersebut menginstruksikan untuk membuat fungsi salam.       
+        </p>
+    </section>
+</section>
+
+
+
+
+
+
+
+<section class="chapter">
+    <h2 class="judul-chapter">ASB Char</h2>
+    <p class="keterangan-chapter">
+        Asb Char adalah shortcut untuk menggunakan karakter khusus yang telah didefinisikan oleh Jaisy.
+        Asb Char masuk ke dalam Section Transliterasi pada Chapter Intro.
+    </p>
+    
+    <section class="section">
+        <h3 class="judul-section">List Asb Char</h3>
+        <p class="content-section text-danger">Daftar Karakter Khusus yang telah didefinisikan. (belum sepenuhnya diterapkan)</p>
+        <div class="container-md">
+            <table class="table table-bordered table-hover"><tbody><tr><th>ARAB</th><th>#pegon</th><th>@kode</th></tr><tr><td>ا</td><td>A</td><td>ALIF</td></tr><tr><td>ب</td><td>b</td><td>BA</td></tr><tr><td>ت</td><td>t</td><td>TAK</td></tr><tr><td>ث</td><td>TS</td><td>TSA</td></tr><tr><td>ج</td><td>j</td><td>JIM</td></tr><tr><td>ح</td><td>H</td><td>HAK</td></tr><tr><td>خ</td><td>KH</td><td>KHOK</td></tr><tr><td>د</td><td>d</td><td>DAL</td></tr><tr><td>ذ</td><td>DZ</td><td>DZAL</td></tr><tr><td>ر</td><td>r</td><td>ROK</td></tr><tr><td>ز</td><td>z</td><td>ZAI</td></tr><tr><td>س</td><td>s</td><td>SIN</td></tr><tr><td>ش</td><td>SY</td><td>SYIN</td></tr><tr><td>ص</td><td>SH</td><td>SHOD</td></tr><tr><td>ض</td><td>DH</td><td>DHOD</td></tr><tr><td>ط</td><td>TH</td><td>TOK</td></tr><tr><td>ظ</td><td>ZH</td><td>DZOK</td></tr><tr><td>ع</td><td>E</td><td>AIN</td></tr><tr><td>غ</td><td>GH</td><td>GHOIN</td></tr><tr><td>ف</td><td>f</td><td>FAK</td></tr><tr><td>ق</td><td>q</td><td>QOF</td></tr><tr><td>ك</td><td>k</td><td>KAF</td></tr><tr><td>ل</td><td>l</td><td>LAM</td></tr><tr><td>م</td><td>m</td><td>MIM</td></tr><tr><td>ن</td><td>n</td><td>NUN</td></tr><tr><td>و</td><td>w</td><td>WAWU</td></tr><tr><td>ي</td><td>y</td><td>YAK</td></tr><tr><td>ه</td><td>h</td><td>HA</td></tr><tr><td>أ</td><td>M</td><td>HAMZAH_ALIF_ATAS</td></tr><tr><td>إ</td><td>W</td><td>HAMZAH_ALIF_BAWAH</td></tr><tr><td>ؤ</td><td>U</td><td>HAMZAH_WAWU</td></tr><tr><td>ئ</td><td>I</td><td>HAMZAH_YAK</td></tr><tr><td>ء</td><td>O</td><td>HAMZAH_MUSTAQIL</td></tr><tr><td>ى</td><td>Y</td><td>ALIF_LAYYINAH</td></tr><tr><td>ة</td><td>T</td><td>TAK_MARBUTOH</td></tr><tr><td>چ</td><td>c</td><td>CE</td></tr><tr><td>ڮ</td><td>g</td><td>GE</td></tr><tr><td>ڤ</td><td>p</td><td>PE</td></tr><tr><td>آ</td><td>B</td><td>HAMZAH_MAD</td></tr><tr><td>َ</td><td>.-</td><td>FATHAH</td></tr><tr><td>ً</td><td>.--</td><td>FATHAIN</td></tr><tr><td>ُ</td><td>.^</td><td>DHUMMAH</td></tr><tr><td>ٌ</td><td>.^^</td><td>DHUMMATAIN</td></tr><tr><td>ِ</td><td>._</td><td>KASROH</td></tr><tr><td>ٍ</td><td>.__</td><td>KASROTAIN</td></tr><tr><td>ْ</td><td>.‘</td><td>SUKUN</td></tr><tr><td>ّ</td><td>.“</td><td>TASYDID</td></tr><tr><td>ٰ</td><td>./</td><td>ALIF_MAD_UP</td></tr><tr><td>ٖ</td><td>.\</td><td>ALIF_MAD_DOWN</td></tr><tr><td> </td><td>SPASI</td><td>SPASI</td></tr><tr><td>١</td><td></td><td>SATU</td></tr><tr><td>٢</td><td></td><td>DUA</td></tr><tr><td>٣</td><td></td><td>TIGA</td></tr><tr><td>٤</td><td></td><td>EMPAT</td></tr><tr><td>٥</td><td></td><td>LIMA</td></tr><tr><td>٦</td><td></td><td>ENAM</td></tr><tr><td>٧</td><td></td><td>TUJUH</td></tr><tr><td>٨</td><td></td><td>DELAPAN</td></tr><tr><td>٩</td><td></td><td>SEMBILAN</td></tr><tr><td>٠</td><td></td><td>NOL</td></tr><tr><td>.</td><td></td><td>TITIK</td></tr><tr><td>،</td><td></td><td>KOMA</td></tr><tr><td>ـ</td><td></td><td>TATWIL</td></tr></tbody></table>
+        </div>
+    </section>
+
+    
+    <section class="section">
+        <h3 class="judul-section">Contoh Asb Char</h3>
+        <p class="content-section">
+            Seperti yang telah dicontohkan pada Chapter Basic.               
+        </p>
+        <pre class="code-section"><code>
+print @JIM @YAK @SYIN
+print @ALIF @LAM @JIM @YAK @SYIN
+
+print #aku @ #lagi @ #koding
+print #Alklm_hw_ALlfZH_Almrkb_bALwDHE
+
+print 'Saya menulis : @ALIF @LAM'
+
+            </code></pre>
+        <p class="code-output">
+جيش
+الجيش
+أكو لاڮي كوديڠ
+الكلم هو اللفظ المركب بالوضع
+Saya menulis : @ALIF @LAM
+        </p>
+        <p class="penjelasan-section">
+            Asb Char tentu saja dapat digunakan pada Variabel, Skill, Logika, dan Fungsi.
+            Namun tidak bisa digunakan pada Text Panjang yaitu Text yang diapit oleh Petik Tunggal atau Petik Ganda.    
+        </p>
+    </section>
+
+    <section class="section">
+        <h3 class="judul-section">Error Asb Char</h3>
+        <p class="content-section">
+            Berikut Contoh Kesalahan dalam menggunakan Asb Char.             
+        </p>
+        <pre class="code-section"><code>
+print @qwe @asd @zxc
+            </code></pre>
+        <p class="code-output">
+Error baris ke 1 // char zxc tidak ditemukan
+        </p>
+        <p class="penjelasan-section">
+            Tidak ditemukannya char pada Transliterasi akan memunculkan Error.
+            Sedangkan ketika pada Pegon, bahkan menuliskan text acakpun, akan ter-render dan tidak memunculkan Error.
+        </p>
+    </section>
+</section>
+
+
+
+
+
+<section class="chapter">
+    <h2 class="judul-chapter">Variabel</h2>
+    <p class="keterangan-chapter">
+        Variabel mempunyai aturan yang perlu diketahui.
+    </p>
+    
+    <section class="section">
+        <h3 class="judul-section">Aturan Variabel</h3>
+        <p class="content-section">
+            <ol class="list-group list-group-numbered"> 
+                <li class="list-group-item"> 
+                    Variabel harus didefinisikan di awal baris.
+                </li> 
+                <li class="list-group-item"> 
+                    Nama Variabel tidak boleh mengandung Spasi.
+                </li> 
+                <li class="list-group-item"> 
+                    Variabel hanya boleh didefinisikan 1 Kali.
+                </li> 
+                <li class="list-group-item"> 
+                    Isi dari Variabel dapat diperbaharui dengan Instruksi update.
+                </li> 
+                <li class="list-group-item"> 
+                    Variabel menjadi syarat untuk menggunakan Instruksi Skill dan memanggil Fungsi.
+                </li> 
+                <li class="list-group-item"> 
+                    Variabel yang didefinisikan di dalam buat_fungsi tidak dapat diakses di luar buat_fungsi.
+                </li> 
+            </ol>          
+        </p>
+        <pre class="code-section"><code>
+$nama = faza
+$namaArab = @FAK @ALIF @ZAI
+print 'Nama saya adalah : ' $nama '. dengan text arab : ' $namaArab
+
+update $nama = ilmi
+update $namaArab = @AIN @LAM @MIM
+print 'Nama saya adalah : ' $nama '. dengan text arab : ' $namaArab
+            </code></pre>
+        <p class="code-output">
+Nama saya adalah : faza. dengan text arab : فاز
+Nama saya adalah : ilmi. dengan text arab : علم
+        </p>
+        <p class="penjelasan-section">
+            Pastikan juga membaca Aturan Skill, Fungsi, dan Logika. Karena akan ada banyak contoh penggunaan variabel yang lebih lanjut.  
+        </p>
+    </section>
+
+
+    <section class="section">
+        <h3 class="judul-section">Error Variabel</h3>
+        <p class="content-section">
+            Berikut Contoh Kesalahan dalam menggunakan Variabel.
+        </p>
+        <pre class="code-section"><code>
+print $data = text
+// Error ... // variabel $data tidak ditemukan
+
+$text = jaisy by asbab
+$text = tes
+// Error ... // variabel $text sudah ada
+            </code></pre>
+
+        <p class="penjelasan-section">
+            Penjelasan Output ada pada Komentar dalam contoh Code.
+        </p>
+    </section>
+</section>
+
+
+
+<section class="chapter">
+    <h2 class="judul-chapter">Skill</h2>
+    <p class="keterangan-chapter">
+        SKill adalah Instruksi untuk memanipulasi data.
+    </p>
+    
+    <section class="section">
+        <h3 class="judul-section">Aturan Skill</h3>
+        <p class="content-section">
+            <ol class="list-group list-group-numbered"> 
+                <li class="list-group-item"> 
+                    Digunakan saat mendefinisikan variabel.
+                </li> 
+                <li class="list-group-item"> 
+                    Instruksi harus mengandung Nama_SKill dan Argument.
+                </li> 
+                <li class="list-group-item"> 
+                    Argument maksimal 4.
+                </li> 
+                <li class="list-group-item"> 
+                    Gunakan tanda : untuk pembatas Argument.
+                </li> 
+            </ol>          
+        </p>
+        <pre class="code-section"><code>
+$jaisy       = 'جَيْشٌ'
+$jaisyGundul = gunduler : $jaisy
+print $jaisyGundul
+
+print 'Jaisy berharokat : ' $jaisy
+print 'Jaisy tidak berharokat : ' $jaisyGundul
+            </code></pre>
+        <p class="code-output">
+جيش
+Jaisy berharokat : جَيْشٌ
+Jaisy tidak berharokat : جيش
+        </p>
+        <p class="penjelasan-section">
+            Perhatikan pada baris kedua. Saat pendefinisian variabel $jaisyGundul terdapat manipulasi data menggunakan Skill gunduler.<br>
+            gunduler sebagai nama skill. tanda : sebagai pembatas argument. $jaisy adalah argument yang akan dimanipulasi.
+        </p>
+    </section>
+
+
+    <section class="section">
+        <h3 class="judul-section">Error Skill</h3>
+        <p class="content-section">
+            Berikut Contoh Kesalahan dalam menggunakan Skill. ????????????????????????????????
+        </p>
+        <pre class="code-section"><code>
+print $data = text
+// Error ... // variabel $data tidak ditemukan
+
+$text = jaisy by asbab
+$text = tes
+// Error ... // variabel $text sudah ada
+            </code></pre>
+
+        <p class="penjelasan-section">
+            Penjelasan Output ada pada Komentar dalam contoh Code.
+        </p>
+    </section>
+
+
+    <section class="section">
+        <h3 class="judul-section">Gunduler</h3>
+        <p class="content-section">
+            Instruksi gunduler adalah instruksi untuk menghapus semua harokat.
+        </p>
+        <pre class="code-section"><code>
+$jaisy = 'جَيْشٌ'
+$tesGunduler = gunduler : $jaisy // جيش  
+print $tesGunduler 
+            </code></pre>
+            <p class="code-output">
+جيش
+            </p>
+
+        <p class="penjelasan-section">
+            Variabel $tesGunduler diberi Instruksi SKill gunduler untuk menghapus semua harokat pada variabel $jaisy.
+        </p>
+    </section>
+
+
+    <section class="section">
+        <h3 class="judul-section">Clean Spasi</h3>
+        <p class="content-section">
+            Instruksi clean_spasi adalah instruksi untuk menghapus atau membersihkan spasi yang terdapat pada awal dan akhir text.
+        </p>
+        <pre class="code-section"><code>
+$tesCleanSpasi = clean_spasi : ' text  ' // text
+print $tesCleanSpasi
+            </code></pre>
+            <p class="code-output">
+text
+            </p>
+
+        <p class="penjelasan-section">
+            Variabel $tesCleanSpasi diberi Instruksi SKill clean_spasi untuk menghapus semua spasi di awal dan akhir data text.
+        </p>
+    </section>
+
+
+    <section class="section">
+        <h3 class="judul-section">Hitung</h3>
+        <p class="content-section">
+            Instruksi Hitung adalah instruksi untuk menghitung Karakter.
+        </p>
+        <pre class="code-section"><code>
+$jaisy = 'جَيْشٌ'
+$tesHitung = hitung : $jaisy         // 12 (harokat dihitung karakter)
+print $tesHitung
+            </code></pre>
+            <p class="code-output">
+12
+            </p>
+
+        <p class="penjelasan-section">
+            Variabel $tesHitung diberi Instruksi SKill hitung untuk menghitung variabel $jaisy.
+        </p>
+    </section>
+
+
+    <section class="section">
+        <h3 class="judul-section">Hapus</h3>
+        <p class="content-section">
+            Instruksi hapus adalah instruksi untuk menghapus semua karakter yang dipilih.
+        </p>
+        <pre class="code-section"><code>
+$jaisyGundul = جيش
+$tesHapus  = hapus : $jaisyGundul : @SYIN        // جي
+print $tesHapus
+            </code></pre>
+            <p class="code-output">
+جي
+            </p>
+
+        <p class="penjelasan-section">
+            Variabel $tesHapus diberi Instruksi SKill hapus untuk menghapus semua karakter @SYIN.
+        </p>
+    </section>
+
+
+    <section class="section">
+        <h3 class="judul-section">Ganti</h3>
+        <p class="content-section">
+            Instruksi Ganti adalah instruksi untuk mengganti suatu karakter ke karakter lain.<br>
+            Argument pertama diisi data yang akan dimanipulasi.<br>
+            Argument kedua diisi karakter yang akan diganti.<br>
+            Argument ketiga diisi karakter pengganti.
+        </p>
+        <pre class="code-section"><code>
+$jaisyGundul = جيش
+$tesGanti  = ganti : $jaisyGundul : @SYIN : @DAL // جيد
+print $tesGanti
+            </code></pre>
+            <p class="code-output">
+جيد
+            </p>
+
+        <p class="penjelasan-section">
+            Variabel $tesGanti diberi Instruksi SKill ganti untuk mengganti @SYIN ke @DAL pada variabel $jaisyGundul.
+        </p>
+    </section>
+
+
+    <section class="section">
+        <h3 class="judul-section">Cari</h3>
+        <p class="content-section">
+            Instruksi cari adalah instruksi untuk mencari karakter pada text. outputnya berupa angka yang dimulai dari 1.
+        </p>
+        <pre class="code-section"><code>
+$jaisyGundul = جيش
+$tesCari1   = cari : $jaisyGundul : @JIM  // 1
+$tesCari2   = cari : $jaisyGundul : @SYIN // 3
+
+print $tesCari1
+print $tesCari2
+            </code></pre>
+            <p class="code-output">
+1
+3
+            </p>
+
+        <p class="penjelasan-section">
+            Variabel $tesCari1 dan $tesCari2 diberi Instruksi SKill cari untuk mencari suatu karakter pada variabel $jaisyGundul.<br>
+            @JIM ada pada huruf pertama dan @SYIN ada pada huruf ketiga.
+        </p>
+    </section>
+
+
+    <section class="section">
+        <h3 class="judul-section">Tambah</h3>
+        <p class="content-section">
+            Instruksi tambah adalah instruksi untuk menambah karakter.<br>
+            Argument pertama diisi data yang akan dimanipulasi.<br>
+            Argument kedua diisi posisi yang akan ditempati<br>
+            Argument ketiga diisi karakter yang akan ditambahkan.
+        </p>
+        <pre class="code-section"><code>
+$jaisyGundul = جيش
+$tesTambah = tambah : $jaisyGundul : 2 : @WAWU  // جيوش
+print $tesTambah
+            </code></pre>
+            <p class="code-output">
+جيوش
+            </p>
+
+        <p class="penjelasan-section">
+            Variabel $tesTambah diberi Instruksi SKill tambah untuk menambah @WAWU setelah huruf kedua pada variabel $jaisyGundul.
+        </p>
+    </section>
+
+
+    <section class="section">
+        <h3 class="judul-section">Ambil</h3>
+        <p class="content-section">
+            Instruksi ambil adalah instruksi untuk mengambil text yang diseleksi.<br>
+            Argument pertama diisi data yang akan diambil.<br>
+            Argument kedua diisi posisi mulai yang akan diambil. (dapat diisi angka atau 'awal' dan 'akhir')<br>
+            Argument ketiga diisi jumlah karakter yang akan diambil. (dapat diisi angka atau 'semua')
+        </p>
+        <pre class="code-section"><code>
+// contoh ambil dengan argument kedua (posisi mulai) berupa 'awal' dan 'akhir'
+$jaisyAbc = jaisy
+
+$tesAmbil1 = ambil : $jaisyAbc : awal : 2 // ja
+$tesAmbil2 = ambil : $jaisyAbc : awal : semua // jaisy
+$tesAmbil3 = ambil : $jaisyAbc : akhir : 2 // sy
+$tesAmbil4 = ambil : $jaisyAbc : akhir : semua // jaisy
+
+print $tesAmbil1
+print $tesAmbil2
+print $tesAmbil3
+print $tesAmbil4
+            </code></pre>
+            <p class="code-output">
+ja
+jaisy
+sy
+jaisy
+            </p>
+
+        <p class="penjelasan-section">
+            Variabel $tesAmbil1 mengambil isi variabel $jaisyAbc mulai dari awal, mengambil 2 karakter.<br>
+            Variabel $tesAmbil2 mengambil isi variabel $jaisyAbc mulai dari awal, mengambil semua sisa karakter.<br>
+            Variabel $tesAmbil3 mengambil isi variabel $jaisyAbc mulai dari akhir, mengambil 2 karakter.<br>
+            Variabel $tesAmbil4 mengambil isi variabel $jaisyAbc mulai dari akhir, mengambil semua sisa karakter.
+        </p>
+
+            <pre class="code-section"><code>
+// contoh ambil dengan argument kedua (posisi mulai) berupa angka. argument ketiga dapat berupa angka positif, angka negatif dan 'semua'.
+$jaisyAbc = jaisy
+$tesAmbil5 = ambil : $jaisyAbc : 2 : 3 // ais
+$tesAmbil6 = ambil : $jaisyAbc : 4 : -2 // is
+$tesAmbil7 = ambil : $jaisyAbc : 5 : -3 // isy
+$tesAmbil8 = ambil : $jaisyAbc : 2 : semua // aisy
+
+print $tesAmbil5
+print $tesAmbil6
+print $tesAmbil7
+print $tesAmbil8
+            </code></pre>
+            <p class="code-output">
+ais
+is
+isy
+aisy
+            </p>
+
+        <p class="penjelasan-section">
+            Variabel $tesAmbil5 mengambil isi variabel $jaisyAbc mulai dari urutan ke-3, mengambil 3 karakter.<br>
+            Variabel $tesAmbil6 mengambil isi variabel $jaisyAbc mulai dari urutan ke-4, mengambil 2 karakter ke belakang.<br>
+            Variabel $tesAmbil7 mengambil isi variabel $jaisyAbc mulai dari urutan ke-5, mengambil 3 karakter ke belakang.<br>
+            Variabel $tesAmbil8 mengambil isi variabel $jaisyAbc mulai dari urutan ke-2, mengambil semua sisa karakter.
+        </p>
+    </section>
+
+
+
+    <section class="section">
+        <h3 class="judul-section">Antara</h3>
+        <p class="content-section">
+            Instruksi antara adalah instruksi untuk mengambil text di antara 2 text pembatas.<br>
+            Argument pertama diisi data yang akan dimanipulasi.<br>
+            Argument kedua diisi karakter pembatas awal.<br>
+            Argument ketiga diisi karakter pembatas akhir.
+        </p>
+        <pre class="code-section"><code>
+$jaisyAbc = jaisy
+$tesAntara1 = antara : $jaisyAbc : j : i // a
+$tesAntara2 = antara : aku dia kamu : aku : kamu // dia
+
+print $tesAntara1
+print $tesAntara2
+            </code></pre>
+            <p class="code-output">
+a
+dia
+            </p>
+
+        <p class="penjelasan-section">
+            Pada text 'jaisy', antara j dan i adalah a. Pada text 'aku dia kamu', antara aku dan kamu adalah dia.
+        </p>
+    </section>
+
+
+
+    <section class="section">
+        <h3 class="judul-section">Mtk</h3>
+        <p class="content-section">
+            Instruksi mtk adalah instruksi untuk melakukan Operasi Dasar Matematika. Yaitu Pertambahan, Pengurangan, Perkalian, dan Pembagian.
+        </p>
+        <pre class="code-section"><code>
+$tesMtk1 = mtk : 1 + 2 // 3
+$tesMtk2 = mtk : 2 - 1 // 1
+$tesMtk3 = mtk : 2 * 2 // 4
+$tesMtk4 = mtk : 4 / 2 // 2
+print $tesMtk1
+print $tesMtk2
+print $tesMtk3
+print $tesMtk4
+
+// kombinasi
+$tesMtk5 = mtk : 5 * 2 + 2 - 3 // 7
+print $tesMtk5
+
+
+// dari variabel
+$hitungJaisy = hitung : jaisy      // 5
+$tesMtk6 = mtk : $hitungJaisy + 3  // 8
+
+print 'jumlah huruf jaisy ditambah 3 adalah' @ $tesMtk6
+            </code></pre>
+            <p class="code-output">
+3
+1
+4
+2
+7
+jumlah huruf jaisy ditambah 3 adalah 8
+            </p>
+
+        <p class="penjelasan-section">
+            Instruksi mtk juga dapat menerima Argument yang mengandung Variabel.
+        </p>
+    </section>
+
+
+
+</section>
+
+
+
+
+
+
+
+<section class="chapter">
+    <h2 class="judul-chapter">Logika</h2>
+    <p class="keterangan-chapter">
+        Ada beberapa Operator Logika yang dapat digunakan.
+    </p>
+    
+    <section class="section">
+        <h3 class="judul-section">Aturan Logika</h3>
+        <p class="content-section">
+            <ol class="list-group list-group-numbered"> 
+                <li class="list-group-item"> 
+                    Mengetahui Instruksi Logika dan Operator Logika
+                </li> 
+                <li class="list-group-item"> 
+                    Aksi dari Instruksi Logika hanya bisa digunakan untuk mendefinikan variabel
+                </li> 
+                <li class="list-group-item"> 
+                    Dapat digunakan dalam pembuatan fungsi.
+                </li> 
+            </ol>          
+        </p>
+    </section>
+
+
+    <section class="section">
+        <h3 class="judul-section">Jika Maka</h3>
+        <p class="content-section">
+            Jika adalah Instruksi untuk menyatakan suatu <b>kondisi</b> (syarat).
+            Maka adalah Instruksi untuk menyatakan suatu <b>aksi</b> (jawab).
+            <br>
+            Kondisi harus mengandung banding, operator logika dan pembanding. <b>Operator Logika</b> dalam jaisy adalah 'merupakan', 'terdapat', dan 'dan'.
+        </p>
+        <pre class="code-section"><code>
+$input = jaisy
+jika $input merupakan jaisy
+maka $hasil = 'variabel input adalah jaisy'
+print $hasil
+            </code></pre>
+            <p class="code-output">
+variabel input adalah jaisy
+            </p>
+
+        <p class="penjelasan-section">
+            Code tersebut melakukan pengecekan. apakah variabel input merupakan jaisy? jika benar, maka definisikan variabel hasil dengan isi tersebut.
+        </p>
+                <pre class="code-section"><code>
+$input = asbab
+jika $input merupakan jaisy
+maka $hasil = 'variabel input adalah jaisy'
+print $hasil
+            </code></pre>
+            <p class="code-output">
+Error baris ke 4 // variabel $hasil tidak ditemukan
+            </p>
+
+        <p class="penjelasan-section">
+            Jika pengecekan salah. maka variabel hasil tidak akan didefinisikan. sehingga tidak ditemukan.
+        </p>
+    </section>
+
+
+
+
+
+
+
+    <section class="section">
+        <h3 class="judul-section">Jika Tidak</h3>
+        <p class="content-section">
+            Instruksi jika_tidak dapat digunakan untuk menyatakan aksi jika suatu kondisi bernilai <b>salah</b>.
+        </p>
+        <pre class="code-section"><code>
+$input = asbab
+jika $input merupakan jaisy
+maka $hasil = 'variabel input adalah jaisy'
+jika_tidak $hasil = 'variabel input bukan jaisy'
+print $hasil
+            </code></pre>
+            <p class="code-output">
+variabel input bukan jaisy
+            </p>
+
+        <p class="penjelasan-section">
+            Code tersebut terdapat penambahan Instruksi jika_tidak untuk mendefinisikan variabel hasil jika variabel input bukan merupakan jaisy.
+            Sehingga variabel hasil tidak lagi kosong seperti contoh kedua pada section Jika Maka.
+        </p>
+    </section>
+
+
+
+
+    <section class="section">
+        <h3 class="judul-section">Atau Jika</h3>
+        <p class="content-section">
+            Instruksi atau_jika dapat digunakan untuk menyatakan kondisi alternatif jika Instruksi Jika  memiliki kondisi yang bernilai salah.
+        </p>
+        <pre class="code-section"><code>
+$input = asbab
+jika $input merupakan jaisy
+maka $hasil = 'variabel input adalah jaisy'
+atau_jika $input merupakan asbab
+maka $hasil = 'variabel input adalah asbab'
+jika_tidak $hasil = 'variabel input bukan jaisy atau asbab'
+print $hasil
+            </code></pre>
+            <p class="code-output">
+variabel input adalah asbab
+            </p>
+
+        <p class="penjelasan-section">
+            Code tersebut terdapat penambahan Instruksi atau_jika untuk mendefinisikan variabel cek sebagai kondisi alternatif, yaitu jika Instruksi Jika memiliki kondisi yang bernilai salah.
+        </p>
+    </section>
+
+
+
+
+
+    <section class="section">
+        <h3 class="judul-section">Merupakan</h3>
+        <p class="content-section">
+            Merupakan adalah Operator Logika untuk membandingkan bendanding dan pembanding yang akan bernilai benar, jika banding dan pembanding sama.
+        </p>
+        <pre class="code-section"><code>
+$input = jaisy
+jika $input merupakan jaisy
+maka $hasil = 'variabel input adalah jaisy'
+print $hasil
+            </code></pre>
+            <p class="code-output">
+variabel input adalah jaisy
+            </p>
+
+        <p class="penjelasan-section">
+            isi variabel input merupakan jaisy, sehingga  bernilai benar.
+        </p>
+    </section>
+
+
+
+    <section class="section">
+        <h3 class="judul-section">Terdapat</h3>
+        <p class="content-section">
+            Merupakan adalah Operator Logika untuk membandingkan bendanding dan pembanding yang akan bernilai benar, jika banding terdapat pada pembanding.
+        </p>
+        <pre class="code-section"><code>
+$input = ai
+jika $input terdapat jaisy
+maka $hasil = 'isi variabel input terdapat pada jaisy'
+print $hasil
+            </code></pre>
+            <p class="code-output">
+isi variabel input terdapat pada jaisy
+            </p>
+
+        <p class="penjelasan-section">
+            isi variabel input terdapat pada jaisy, sehingga  bernilai benar.
+        </p>
+    </section>
+
+
+
+    <section class="section">
+        <h3 class="judul-section">Dan</h3>
+        <p class="content-section">
+            Merupakan adalah Operator Logika untuk menjadikan 2 syarat kondisi.
+        </p>
+        <pre class="code-section"><code>
+$input = ai
+jika $input terdapat jaisy dan $input terdapat bermain
+maka $hasil = 'isi variabel input terdapat pada jaisy dan bermain'
+jika_tidak $hasil = '2 Kondisi tidak terpenuhi'
+print $hasil
+            </code></pre>
+            <p class="code-output">
+isi variabel input terdapat pada jaisy dan bermain
+            </p>
+
+        <p class="penjelasan-section">
+            Variabel input berisi 'ai'. 2 Kondisi akan bernilai benar jika 2 Kondisi terpenuhi.
+        </p>
+
+
+        <pre class="code-section"><code>
+$input = ais
+jika $input terdapat jaisy dan $input terdapat bermain
+maka $hasil = 'isi variabel input terdapat pada jaisy dan bermain'
+jika_tidak $hasil = '2 Kondisi tidak terpenuhi'
+print $hasil
+        </code></pre>
+        <p class="code-output">
+2 Kondisi tidak terpenuhi
+        </p>
+
+        <p class="penjelasan-section">
+            Variabel input berisi 'ai'. 2 Kondisi akan bernilai benar jika 2 Kondisi terpenuhi.
+        </p>
+    </section>
+
+</section>
+
+
+
+
+
+
+
+
+<section class="chapter">
+    <h2 class="judul-chapter">Fungsi</h2>
+    <p class="keterangan-chapter">
+        Fungsi merupakan pendefinisian skill buatan. 
+    </p>
+    
+    <section class="section">
+        <h3 class="judul-section">Aturan Fungsi</h3>
+        <p class="content-section">
+            <ol class="list-group list-group-numbered"> 
+                <li class="list-group-item"> 
+                    Fungsi harus didefinisikan sebelum dipanggil.
+                </li> 
+                <li class="list-group-item"> 
+                    Fungsi mengsiolasi variabel yang didefinisikan di dalamnya. Sehingga variabel yang didefinisikan di dalam fungsi tidak dapat langsung diakses di luar fungsi.
+                </li> 
+                <li class="list-group-item"> 
+                    Fungsi hanya mengeluarkan data yang didefinisikan pada variabel hasil.
+                </li> 
+            </ol>          
+        </p>
+    </section>
+
+
+    <section class="section">
+        <h3 class="judul-section">Buat Fungsi</h3>
+        <p class="content-section">
+           Instruksi buat_fungsi harus ditutup dengan Instruksi tutup_fungsi.
+           Instruksi buat_fungsi harus dilengkapi dengan Nama Fungsi dan argument. (maksimal 4 argument).
+           Argument adalah variabel pesanan yang akan diisi ketika pemanggilan untuk kemudian diproses di dalam fungsi.
+           <b>Pemanggilan Fungsi</b> dapat dilakukan dengan penambahan simbol bintang. dan aturannya seperti skill.
+        </p>
+        <pre class="code-section"><code>
+buat_fungsi salam : $var1
+$gundulSalam = gunduler : $textSalam
+$hasil = $gundulSalam @ $var1
+tutup_fungsi
+
+$textSalam = 'ٱلسَّلَامُ عَلَيْكُم'
+$tesSalam1 = *salam : Faza
+print $tesSalam1
+
+$tesSalam2 = *salam : Asbab
+print $tesSalam2
+
+$tesSalam3 = *salam : Jaisy
+print $tesSalam3
+
+$tesSalam4 = *salam : Kamu
+print $tesSalam4
+            </code></pre>
+            <p class="code-output">
+ٱلسلام عليكم Faza
+ٱلسلام عليكم Asbab
+ٱلسلام عليكم Jaisy
+ٱلسلام عليكم Kamu
+            </p>
+
+        <p class="penjelasan-section">
+            variabel var1 merupakan variabel yang akan diisi melalui argument.
+            Fungsi dapat dipanggil beberapa kali. Sehingga akan sangat berguna jika kita membuat skill buatan yang akan digunakan beberapa kali.
+        </p>
+</section>
+
+
+
+
+
+
+
+
+
+<section class="chapter">
+    <h2 class="judul-chapter">Experimental</h2>
+    <p class="keterangan-chapter">
+        Fitur yang sudah masuk todolist
+    </p>
+    
+    <section class="section">
+        <h3 class="judul-section">List</h3>
+        <p class="content-section">
+           Briefing
+        </p>
+        <pre class="code-section"><code>
+// untuk bahasa pemprograman saya. array disebut list.
+$listNama = [faza, ilmi, asbab]
+// array dimulai dari 1 bukan 0
+print $listNama[1] // output: faza
+print $listNama[2] // output: ilmi
+print $listNama[3] // output: asbab 
+
+tambah $listNama = akbar
+print $listNama[4] // output: akbar
+    
+update $listNama[4] = milio
+print $listNama[4] // output: milio
+
+
+hapus $arrayNama[4]
+print $arrayNama // output: [faza, ilmi, asbab]
+
+
+// asosiatif list
+$listBio = [nama : faza, umur : 22]
+print $listBio[nama]
+
+$listBio[alamat] = indonesia
+print $listBio // [nama : faza, umur : 22, alamat : indonesia]
+
+tambah $listBio = tes // error : tambah tidak bisa digunakan di asosiatif list
+
+hapus $listBio[alamat]
+print $listBio // [nama : faza, umur : 22]
+            </code></pre>
+
+        <p class="content-section">
+            sudah bisa
+         </p>
+         <pre class="code-section"><code>
+$listNama = [faza, ilmi, asbab]
+print $listNama
+print $listNama[1]
+
+print ---------------------------------------------------
+$bio = [nama: faza, umur: 30, pacar: [flora, freya]]
+print $bio
+print $bio[pacar]
+
+print ----------------------------------------------------
+$bio2 = [nama: faza, umur: 30, pacar: [flora, freya] // pas dihapus ] diakhir kok masih valid njir wkwkwk
+print $bio2
+print $bio2[pacar]
+             </code></pre>
+             <p class="code-output">
+[faza,ilmi,asbab]
+faza
+---------------------------------------------------
+[nama:faza,umur:30,pacar:[flora,freya]]
+[flora,freya]
+----------------------------------------------------
+[nama:faza,umur:30,pacar:[flora,freya]
+[flora,freya]
+             </p>
+ 
+         <p class="penjelasan-section">
+             kita akan garap nanti. termasuk untuk for loop.
+         </p>
+</section>
+

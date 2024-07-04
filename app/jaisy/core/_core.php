@@ -12,18 +12,22 @@ require_once 'cekSyntax.php';
 require_once 'isolasi.php';
 require_once 'pegon.php';
 
+require_once 'list.php';
+
 
 
 
 
 $GLOBALS['listSkill']     = [
                                 'gunduler', 'clean_spasi', 'hitung',
-                                'hapus', 'ganti', 'cari', 'tambah',
-                                'pecah_huruf', 'pecah',
-                                'antara', 'awal', 'akhir'
+                                'hapus', 'ganti', 'cari', 'tambah', 'ambil', 'mtk', 'antara',
+                                // 'pecah_huruf', 'pecah',
+                                // 'antara', 'awal', 'akhir',
+                                // 'merupakan', 'terdapat'
                             ];
 $GLOBALS['listBaris'] = [];
 $GLOBALS['listVar'] = [];
+$GLOBALS['tmpVarFungsi'] = [];
 $GLOBALS['listPrint'] = [];
 $GLOBALS['tmpJikaMaka'] = [];
 $GLOBALS['listenJika'] = [];

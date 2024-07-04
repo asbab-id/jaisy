@@ -1,0 +1,140 @@
+$data = 'Saya menulis : @ALIF @LAM'
+print $data
+Error baris ke 1 // Skill atau Fungsi Tidak Ada.
+(fixed: tambah isolasiPetik $isiVar)
+
+
+
+
+
+
+$$data = 'Saya menulis  @ALIF @LAM'
+print $$data
+Error baris ke 2 // variabel $ tidak ditemukan
+(fixed: abaikan wkwkwk)
+
+
+
+
+
+
+
+
+
+update $7 = njir
+print $7
+// njir
+belum didefinisikan kok bisa diupdate njir
+(fixed: tambah elseif di variabel.php)
+
+
+
+
+$input = jaisy
+jika $input merupakan jaisy
+maka $hasil = '$cek adalah ' jaisy
+print $hasil
+Error baris ke 3 // variabel $cek!^`_^!`adalah!^`_^!` tidak ditemukan
+(fixed: tambahkan parseIsolasi dolar ke parsePetik)
+
+
+
+
+$input = jaisy
+jika $input merupakan jaisy
+maka $hasil = '$'cek @ adalah @  jaisy
+print $hasil
+Error baris ke 3 // variabel $cek tidak ditemukan
+(fixed: spt di atas. tambahkan parseIsolasi dolar ke parsePetik)
+
+
+
+
+
+
+
+
+buat_fungsi salam : $var1 : $var2
+$gundulSalam = gunduler : $textSalam
+$hasil = $gundulSalam @ $var1 @ dan @ $var2
+tutup_fungsi
+
+$textSalam = 'ٱلسَّلَامُ عَلَيْكُم'
+$tesSalam = *salam : Faza : Asbab
+print $tesSalam
+// ٱلسَّلَامُ عَلَيْكُم Faza dan Asbab
+// ga bisa gunduler njir di dalam fungsi wkwkwk
+// (fixed: parsed tiap var + clearConcat)
+
+
+
+
+
+
+buat_fungsi salam : $var1 : $var2
+$hasil = gunduler : $textSalam
+tutup_fungsi
+
+$textSalam = 'ٱلسَّلَامُ عَلَيْكُم'
+$tesSalam = *salam : a
+print $tesSalam
+// gunduler:ٱلسَّلَامُعَلَيْكُم
+// beri catatan bahwa hasil tidak bisa skill/fungsi (seperti print)
+// (fixed: parsed tiap var + clearConcat)
+
+
+
+
+$jaisy = 'جَيْشٌ'
+$tesGunduler = gunduler : $jaisy // جيش 
+$tesGunduler = gunduler : $jaisy // جيش
+// variabel skill kok gak tabrakan njir wkwkwk
+(fixed: perbaiki struktur if)
+
+
+
+
+
+$data/tes = cok
+print $data/tes
+// gokil variabel iso garis miring njir wkwkwkwk
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//buatlah list (array). dimulai dari 0, json
+$ke = 2
+
+$var/1   = cek
+$var/$ke = cek
+$var/    = auto increment
+
+$var2/nama = faza
+$var2/umur = 30
+
+
+
+for ($x = 0; $x <= 10; $x++) {
+  echo "The number is: $x ";
+} 
+ulang_id $var : $id
+tutup_ulang
+
+
+$colors = array("red", "green", "blue", "yellow");
+foreach ($colors as $x) {
+  echo "$x ";
+}
+ulang_list
+tutup_ulang
+

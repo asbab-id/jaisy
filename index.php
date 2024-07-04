@@ -16,10 +16,14 @@ require_once __DIR__.'/phprouter.php';
 
 
 get('/', 'app/jaisy/playground.php');
-get('/tmp', 'app/jaisy/tmp.php');
-get('/tmp-php', 'app/jaisy/tmp-php.php');
 post('/interpreter', 'app/jaisy/interpreter.php');
 get('/char', 'app/jaisy/playground-char.php');
+
+get('/docs', 'app/jaisy/docs/index.php');
+get('/docs/$versi', 'app/jaisy/docs/index.php');
+
+get('/tmp', 'app/jaisy/tmp.php');
+get('/tmp-php', 'app/jaisy/tmp-php.php');
 
 
 

@@ -18,14 +18,9 @@ function gunduler($lafd){
 	return $data;
 }
 
-function clean_spasi($str){
+function cleanSpasi($str){
     //cleanSPasi('   oi   '); // 'oi'
     return trim($str);
-}
-
-function hitung($str){
-    //hitung('oi'); // 2
-    return strlen($str);
 }
 
 function hapus($str, $hps){
@@ -38,131 +33,8 @@ function hapus($str, $hps){
 }
 
 
-function ganti($str, $hps, $jadi){
-    // ganti('wdatabasew', 'w', 'x'); // 'database'
-    if(terdapat($str, $hps)){
-        return str_replace($hps, $jadi, $str);
-    }else{
-        return $str;
-    }
-}
-
-function cari($str, $cari){
-    $pos = mb_strpos($str, $cari);
-    if($pos !== false){
-        return $pos + 1;
-    } else {
-        return '0';
-    }
-}
 
 
-function tambah($str, $ke, $tambah) {
-    // Pastikan posisinya valid
-    if ($ke < 1 || $ke > mb_strlen($str) + 1) {
-        return 'Posisi tidak valid';
-    }
-
-    // Pindahkan posisi ke basis 0 untuk mb_substr
-    // $ke--;
-
-    // Pisahkan string menjadi dua bagian dan tambahkan karakter di antaranya
-    $awal = mb_substr($str, 0, $ke);
-    $akhir = mb_substr($str, $ke);
-
-    // Gabungkan bagian-bagian dengan karakter tambahan
-    return $awal . $tambah . $akhir;
-}
-
-
-function ambil($str, $posisi, $jumlah) {
-    $panjangStr = mb_strlen($str);
-
-    if ($posisi === 'awal') {
-        if ($jumlah === 'semua') {
-            return $str;
-        } else {
-            return mb_substr($str, 0, (int)$jumlah);
-        }
-    } elseif ($posisi === 'akhir') {
-        if ($jumlah === 'semua') {
-            return $str;
-        } else {
-            return mb_substr($str, $panjangStr - (int)$jumlah, (int)$jumlah);
-        }
-    } else {
-        $posisi = (int)$posisi - 1; // Ubah posisi ke indeks berbasis 0
-
-        if ($jumlah === 'semua') {
-            return mb_substr($str, $posisi);
-        } elseif ($jumlah < 0) {
-            $jumlah = abs($jumlah);
-            $mulai = $posisi - $jumlah + 1; // Hitung posisi awal yang baru untuk jumlah negatif
-            return mb_substr($str, $mulai, $jumlah);
-        } else {
-            return mb_substr($str, $posisi, (int)$jumlah);
-        }
-    }
-}
-
-
-
-function mtk($operasi) {
-    // Hilangkan spasi yang tidak perlu dari operasi
-    $operasi = str_replace(' ', '', $operasi);
-
-    // Pisahkan string operasi menjadi angka dan operator
-    $pattern = '/(-?\d+(\.\d+)?)([\+\-\*\/])(-?\d+(\.\d+)?)/';
-    preg_match_all($pattern, $operasi, $matches, PREG_SET_ORDER);
-
-    // Inisialisasi hasil dengan angka pertama dari operasi
-    $hasil = (float)$matches[0][1];
-
-    // Loop melalui setiap operasi yang cocok dan lakukan perhitungan
-    foreach ($matches as $match) {
-        $angka2 = (float)$match[4];
-        $operator = $match[3];
-
-        switch ($operator) {
-            case '+':
-                $hasil += $angka2;
-                break;
-            case '-':
-                $hasil -= $angka2;
-                break;
-            case '*':
-                $hasil *= $angka2;
-                break;
-            case '/':
-                // Handle division by zero
-                if ($angka2 == 0) {
-                    return "Pembagian dengan nol tidak diperbolehkan.";
-                }
-                $hasil /= $angka2;
-                break;
-            default:
-                return "Operasi matematika tidak valid.";
-        }
-    }
-
-    return $hasil;
-}
-
-function antara($str, $awal, $akhir) {
-    $posAwal = mb_strpos($str, $awal);
-    if ($posAwal === false) {
-        return ""; // Jika marker awal tidak ditemukan
-    }
-
-    $posAkhir = mb_strpos($str, $akhir, $posAwal + mb_strlen($awal));
-    if ($posAkhir === false) {
-        return ""; // Jika marker akhir tidak ditemukan setelah marker awal
-    }
-
-    // Ambil substring di antara marker awal dan akhir
-    $panjangAwal = $posAwal + mb_strlen($awal);
-    return mb_substr($str, $panjangAwal, $posAkhir - $panjangAwal);
-}
 
 /// /////////////////////////////////////////////////////////////////////////////////////////////////////
 //  pecah (array/string) //////////
@@ -221,7 +93,7 @@ function pecah($w, $s, $ke=null, $callback=null){
     }
 }
 
-function antara_ori($str, $pembuka, $penutup, $ke=null, $callback=null) {
+function antara($str, $pembuka, $penutup, $ke=null, $callback=null) {
     // antara('aku memakan (roti) dan (susu)', '(', ')');        //['roti', 'susu']
     // antara('aku memakan (roti) dan (susu)', '(', ')', 'terakhir-1'); // 'roti'
     if(!terdapat($str,$pembuka) && !terdapat($str, $penutup)){
@@ -259,36 +131,6 @@ function antara_ori($str, $pembuka, $penutup, $ke=null, $callback=null) {
 
 
 /// /////////////////////////////////////////////////////////////////////////////////////////////////////
-//  ambil (string) //////////
-// //////////////////////////////////////////////////////////////////////////////////////////////////////
-function akhir($w, $x=1){
-    // akhir('abc', 1); // 'c'
-    return mb_substr($w, '-'.$x);
-}
-
-function tengah($w, $ke, $brp){
-    // tengah('abcdefg', 2, 3); // 'cde'
-    $ke = $ke - 1;
-    return mb_substr($w, $ke, $brp);
-}
-
-function awal($w, $x=1){
-    // awal('abc', 1); // 'a'
-    return mb_substr($w,0, $x);
-}
-
-
-
-
-
-
-
-
-
-
-
-
-/// /////////////////////////////////////////////////////////////////////////////////////////////////////
 //  logic lacak (bool) //////////
 // //////////////////////////////////////////////////////////////////////////////////////////////////////
 function terdapat($x, $w){
@@ -315,6 +157,30 @@ function merupakan($w, $x){
         return in_array($w, $x);
     }
 }
+
+
+
+
+/// /////////////////////////////////////////////////////////////////////////////////////////////////////
+//  ambil (string) //////////
+// //////////////////////////////////////////////////////////////////////////////////////////////////////
+function akhir($w, $x=1){
+    // akhir('abc', 1); // 'c'
+    return mb_substr($w, '-'.$x);
+}
+
+function tengah($w, $ke, $brp){
+    // tengah('abcdefg', 2, 3); // 'cde'
+    $ke = $ke - 1;
+    return mb_substr($w, $ke, $brp);
+}
+
+function awal($w, $x=1){
+    // awal('abc', 1); // 'a'
+    return mb_substr($w,0, $x);
+}
+
+
 
 
 

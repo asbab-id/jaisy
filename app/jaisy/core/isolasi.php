@@ -2,19 +2,24 @@
 
 // PETIK
 function isolasiPetik($barisKe, $data){
-    return preg_replace_callback(
+    $output =  preg_replace_callback(
         '/(["\'])(.*?)\1/',
-        function ($matches) {
+        function ($matches) use ($barisKe) {
             $innerText = str_replace(' ', '!^`_^!`', $matches[2]);
+            $innerText = isolasiDolar($barisKe, $innerText);
             // return $matches[1] . $innerText . $matches[1];
             return $innerText;
         },
         $data
     );
+    // echo $output;
+    return $output;
 }
 
 function parseIsolasiPetik($barisKe, $data){
-    return str_replace('!^`_^!`', ' ', $data);
+    $output = str_replace('!^`_^!`', ' ', $data);
+    $output = parseIsolasiDolar($barisKe, $output);
+    return $output;
 }
 
 

@@ -70,111 +70,71 @@
         <div class="suggestion"></div>
         <div class="editor-wrapper">
             <div id="line-numbers" class="line-numbers"></div>
-            <div id="code-editor" class="code-editor" contenteditable="true">// ini adalah sample untuk syntax highlight
-print alhamdulillah
-
-// tipe data (text, angka, list)
-$petik      = 'bismillah'
-$tanpaPetik = saya ucapkan
-$gabung1    = $tanpaPetik $petik        // saya ucapkanbismillah
-$gabung2    = $tanpaPetik @spasi $petik // saya ucapkan bismillah
- 
-
-// CONTOH FUNCTION BAWAAN
-// jika di javascript gunduler(var1, var2, var3)
-// jika di jaisy      gunduler : var1 : var2 : var3
-$jaisy       = 'جَيْشٌ'
-$tesGunduler = gunduler : $jaisy         // جيش  
-
-$tesCleanSpasi = clean_spasi : ' text  ' // text
-$tesHitung     = hitung : $jaisy         // 6
-
-$tesHapus  = hapus : $tesGunduler : @syin        // جي
-$tesGanti  = ganti : $tesGunduler : @syin : @dal // جيد
-$tesCari   = cari : $tesGunduler : @yak          // 2
-$tesTambah = tambah : $tesGunduler : 2 : @wawu  // جيوش
-print ganti : $tesGunduler : @syin : @dal // tidak bisa, hanya bisa digunakan saat define variable
-$error1 = gunduler : $jaisy hapus : @syin // tidak bisa menggunakan function banyak dalam 1 baris. harus buat di baris baru dengan update variabel
-
-$tesPecahHuruf = pecah_huruf : asbab               // ['a','s','b','a','b']
-$tesPecah      = pecah : $gabung2 : @spasi         // ['saya', 'ucapkan', 'bismillah']
-print $tesPecah[1] // saya
-
-$tesAntara = antara : $tesGunduler : @jim : @syin // ي
-$tesAwal   = awal : $tesGunduler                  // ج
-$tesAkhir  = akhir : $tesGunduler                 // ش
-$tesTengah = tengah : $tesGunduler                // ي ???????????????????
-
-
-// CONTOH PERCABANGAN LOGIKA
-// if
-jika $tesGunduler merupakan 'جيش' // dalam js, ==
-maka $hasil1 = 'hasil dari gunduler benar'
-
-// bisa ditulis juga seperti ini, dengan diapit kurung kurawal
-maka {
-
-}
-
-// if else
-jika $gabung2 terdapat kamu // dalam js, includes
-maka $hasil2 = ada kamu
-jika_tidak $hasil2 = tidak ada kamu
-
-// if, elseif, else
-// contoh logika mencari isim
-$tanwin =  ًٌٍ
-jika $jaisy terdapat $tanwin // bolak-balik cek terdapatnya
-maka $hasil3 = isim
-atau_jika $jaisy terdapat #AL // elseif
-maka $hasil3 = isim
-jika_tidak $hasil3 = tidak isim // else
-
-jika 'saya' merupakan 'sayang' atau 'saya' terdapat 'aya'
-maka $hasil3 = bolehlah wkwkwk
-
-jika 'saya' merupakan 'saya' dan 'kamu' merupakan 'kamu'
-maka $hasil4 = ya iyalah wkwkwk
-
-
-// contoh operasi mtk
-$text = hitung 'abcd'
-$mtk  = $text + 1 - 1 * 1 / 1 // 4
+            <div id="code-editor" class="code-editor" contenteditable="true">// bab 1 : print dan komentar
+print  Halloo // output : Halloo
+// kode ini tidak akan dieksekusi karena ini adalah komentar
 
 
 
+// bab 2 : shortcut string dan concat
+print @JIM @YAK @SYIN // output : جيش 
+print #aku @ #lagi @ #koding // output : أكو لاڮي كوديڠ
+print #Alklam_hw_ALlfZH_Almrkb_bALwDHE // output : الكلام هو اللفظ المركب بالوضع
+print Hallo @ Kehidupan. # Aku $ Hidup. // concat @,#,$ output : Hallo Kehidupan. Aku Hidup. 
 
 
-// todo : buat loop;  function 
-// function salam($var1, $var2, $var3){}
-buat_fungsi salam : $var1 : $var2 : $var3
-$hasil = Assalamualaikum @spasi $var1 @spasi dapet salam dari @spasi $var2 @spasi dan @spasi $var3
-// {}  bebas mau ngapain
-// $hasil adalah return bawaan
-tutup_fungsi salam
 
-// salam(kamu, asbab, jaisy)
-$tesSalam = *salam : kamu : asbab : jaisy // Assalamualaikum kamu dapet salam dari asbab dan jaisy
-// @ # $ : = *  {} []
-// kurang dari, lebih dari, sama dengan
-// tidak 
-
-// buat loop ?
-$list = $tesPecah // ['saya', 'ucapkan', 'bismillah']
-ulang $tesPecah ?   
+// bab 3 : quoted string tidak akan merender shortcut string dan variabel
+print 'ini adalah Jaisy Query Interpreter' @ "Ayo Kapan Ono!!!" // output : ini adalah Jaisy Query Interpreter Ayo Kapan Ono!!!
+print 'Penulisan Arab : ' @JIM @YAK @SYIN @ JAISYUN // output : Penulisan Arab : جيش JAISYUN
+print 'Saya menulis : @ALIF @LAM' // output : Saya menulis : @ALIF @LAM
 
 
-// ikut php/js
-for ($x = 0; $x <= 10; $x++) {
-print "The number is: $x 
-}
+
+// bab 3 : pendefinisian variabel dan update variabel
+$nama = faza
+$namaArab = @FAK @ALIF @ZAI
+print 'Nama saya adalah : ' $nama '. dengan text arab : ' $namaArab // output : Nama saya adalah : faza. dengan text arab : فاز
+
+update $nama = ilmi
+update $namaArab = @AIN @LAM @MIM
+print 'Nama saya adalah : ' $nama '. dengan text arab : ' $namaArab  // output : Nama saya adalah : ilmi. dengan text arab : علم
 
 
-// membaca kamus dalam database
-// getKamus('mg', 'key', 20, [=])
-$makan = kamus : ah_mujarrod : key : 20 : [=]
-print $makan // []
-print $makan[result][1][arab] // أكَلَ ـُـ أكْلاً الطعامَ : تناوله</div>
+
+// bab 4 : pemanggilan skill (function bawaan dari bahasa pemprgoraman) 
+$tesCleanSpasi = clean_spasi : ' text  ' // jika dalam php clean_spasi(' text  ')
+print $tesCleanSpasi // output : text
+
+
+
+// bab 5 : Logika if else
+$cek = kata
+jika $cek merupakan kata // if
+maka $hasil = benar      // aksi jika if terpenuhi
+kemudian $hasil2 = betul // aksi kedua jika if terpenuhi
+atau_jika $cek merupakan entahlah // else if
+maka $hasil = entah // aksi jika else if terpenuhi
+kemudian $hasil2 = tidak @ tahu // aksi kedua jika else if terpenuhi
+jika_tidak $hasil = salah // else sekaligus aksi jika if dan else if tidak terpenuhi
+kemudian $hasil2 = ngawor // aksi kedua dari else
+
+print $hasil // output : benar
+print $hasil2 // output : betul
+
+
+
+// bab 6 : membuat function. jika dalam php function salam($var1){return $hasil = ...}
+buat_fungsi salam : $var1
+$hasil = 'اَلسَّلَامُ عَلَيْكُمْ وَرَحْمَةُ اللهِ وَبَرَكَا تُهُ' @ $var1
+tutup_fungsi
+
+
+$tesSalam1 = *salam : Faza // pemanggilan fungsi. diawali tanda *. jika dalam php salam('Faza')
+print $tesSalam1 // output : اَلسَّلَامُ عَلَيْكُمْ وَرَحْمَةُ اللهِ وَبَرَكَا تُهُ Faza
+
+$tesSalam2 = *salam : Asbab
+print $tesSalam2 // output : اَلسَّلَامُ عَلَيْكُمْ وَرَحْمَةُ اللهِ وَبَرَكَا تُهُ Asbab</div>
         </div>
         <button id="run" onclick="runJaisy(this)" class="btn-run">▶ Run</button>
         <div id="output"></div>
